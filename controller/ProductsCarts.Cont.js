@@ -75,9 +75,10 @@ const getCart = async (req, res) => {
     const cart = await Cart.findOne({ userId }).populate('items.productId'); 
 
     if (!cart) {
-      return res.status(404).json({
+      return res.json({
         status: 404,
         message: 'Cart not found for this user',
+        data:[]
       });
     }
 
