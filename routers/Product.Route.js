@@ -9,7 +9,7 @@ const {placeOrder, getOrders}=require('../controller/Order.Cont')
 productRouter.post("/addProduct", addProduct);
 productRouter.get("/getAllProducts", getAllProducts);
 productRouter.post("/addToCart", createOrUpdateCart);
-productRouter.post("/getCart", getCart);
+productRouter.get("/getCart", getCart);
 productRouter.post("/createOrder", authenticateUser, placeOrder);
 productRouter.get("/getOrders", getOrders);
 
