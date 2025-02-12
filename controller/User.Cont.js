@@ -60,7 +60,7 @@ const registerUser  = async (req, res) => {
         message: `${user.fullName}, You are logged in successfully!`,
         token,
         succes:true,
-          user
+         data:{userId:user._id,name:user.fullName}
   
       });
   
